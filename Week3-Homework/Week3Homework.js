@@ -21,22 +21,23 @@ function getPizzaOrder(size, crust, ...toppingChoices) {
   console.log(orderRecieved + ", coming right up!");
   return size, crust, toppingChoices;
 }
-
+console.log("----------------------------------------------------");
 // Create a preparePizza function that
 // has an array as its parameter with three items: a size, a crust, and a list of toppings
 // prints something like "...Cooking pizza..."
 // outputs a pizza Object with appropriate key-value pairs for size, crust, and toppings
-let pizzaOrder= {
-  size: "medium",
-  crust: "thick",
-  toppingChoices: ["spinach", "bacon", "tomatoes"]
-};
+let pizzaOrder;
 
-function preparePizza(size, crust, ...toppingChoices) {
+function preparePizza ([size, crust, ...toppingChoices]) {
   console.log("Order in Progress");
-  pizzaOrder;
-  console.log(pizzaOrder);
+  pizzaOrder = {
+    size: "medium",
+    crust: "thick",
+    toppingChoices: ["spinach", "bacon", "tomatoes"]
+  };
+  console.log(pizzaOrder.join);
 }
+preparePizza(pizzaOrder);
 
 // Create a servePizza function that
 // has a parameter of a pizza Object
@@ -56,10 +57,10 @@ function servePizza(pizzaOrder) {
   return pizzaOrder;
 }
 // Call each function and (starting with preparePizza) use the returned value from the previous function as its input
-greetCustomer("Pinky");
-getPizzaOrder(" spinach", " bacon", " tomatoes");
-preparePizza(getPizzaOrder("large", "thick", "spinach ", "bacon ", "tomatoes"));
-servePizza(preparePizza(getPizzaOrder("large", "thick", "sausage", "spinach")));
+// greetCustomer("Pinky");
+// getPizzaOrder(" spinach", " bacon", " tomatoes");
+// preparePizza(getPizzaOrder("large", "thick", "spinach ", "bacon ", "tomatoes"));
+// servePizza(preparePizza(getPizzaOrder("large", "thick", "sausage", "spinach")));
 
 // Add, commit, and push your JS file to your GitHub repo.
 // Send your TA a link to your GitHub Homework repo when finished.
