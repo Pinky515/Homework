@@ -1,0 +1,79 @@
+html {
+  width: 95%;
+  border: solid grey 3px;
+  padding: 0;
+  margin: 1em;
+  justify-content: center;
+  align-content: center;
+  margin-left: 1.75rem;
+}
+
+header {
+  text-align: center;
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+div > img {
+  max-height: 400px;
+}
+
+#img-caption {
+  font-weight: bolder;
+}
+
+div a {
+  text-decoration: none;
+  color:rgb(114, 4, 204);
+}
+
+footer {
+  text-align: end;
+  font-weight: bolder;
+  font-size: large;
+  width: 90%;
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: brown;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+div > ul > li {
+  list-style: none;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: larger;
+  width: auto;
+  display: block;
+}
+
+
+/*
+trying to move the list on both sides of the photo */
+
+ul:first-of-type {
+  position: absolute;
+  /* float: left; */
+  right: 80%;
+  top: 50%;
+}
+
+ul:last-of-type {
+  /* float: right; */
+  position: absolute;
+  left: 70%;
+  bottom: 50%;
+}
