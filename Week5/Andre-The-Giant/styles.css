@@ -1,36 +1,117 @@
 html {
   background-color: antiquewhite;
+  width: 100%;
 }
 
 body {
   text-align: center;
   font-size: 18px;
+  width: 85%;
+  justify-content: center;
+  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 50px;  
 }
 
-img {
-  height: 100%;
+h2 {
+  padding: 10px;;
 }
+
 
 div {
   border: 2px solid burlywood;
-  margin: 10px;
+  padding: 10px;
 }
 
-#introPic {
-  float: left;
+div p {  
+  text-align: left;
 }
 
-#bio {
-  float: right;
+.bio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
 }
+
+img.bio {
+  /* width: 30%; */
+  height: 350px;
+  /* display: block; */
+  /* float: left; */
+  vertical-align: middle;
+  justify-content: center;
+}
+
 #bio > li {
-  padding: 2px;
+  padding: 5px;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: auto;
+  list-style: none;
+  text-align: left;
+  font-size: larger;
+  width: 100%;
+  vertical-align: middle;
+}
+
+span {
+  text-decoration: underline;
+}
+
+/* not working */
+#stuff > a {
+  color: black;
+  font-size: larger;
+}
+
+
+img:not(.bio) {
+  width: 100%;
 }
 
 #pro {
   width: auto;
+}
+
+div #achievements {
+  list-style: none;
+  padding-left: 0;
+}
+
+#achievements li {
+  padding: 3px;
+  font-size: 20px;
+}
+
+#achievements a {
+  color: black;
+}
+
+ a:hover{
+  background-color: burlywood;
+}
+
+@media (max-width: 500px) {
+  * {
+    /* background-color: yellow; */
+  }
+
+  .title {
+    width: 94%;
+  }
+
+  .bio {
+    flex-direction: column;
+  }
+
+  .bio img {
+    height: 375px;
+    vertical-align: middle;
+  }
+
 }
