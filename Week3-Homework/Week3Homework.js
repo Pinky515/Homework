@@ -3,14 +3,21 @@
 let pizzaToppings = [" peperoni", " bacon", " tomatoes", " spinach"];
 console.log(pizzaToppings);
 
-// Create a greetCustomer function that prints a message that welcomes a guest, then informs them of the available toppings by looping over pizzaToppings (don't worry about perfect grammar here yet, i.e. "a, b, and c", see Bonus Challenge #9)
+// Create a greetCustomer function that 
+// prints a message that welcomes a guest, 
+// then informs them of the available toppings by looping over pizzaToppings 
+// (don't worry about perfect grammar here yet, i.e. "a, b, and c", see Bonus Challenge #9)
 // i.e. "Welcome to Pizza House, our toppings are: a, b, c, ..."
 
 function greetCustomer(name) {
-  let greet = `Welcome to Pinky's Pies, ${name}! Our toppings today are ${pizzaToppings}`;
+  // let greet = `Welcome to Pinky's Pies, ${name}! Our toppings today are ${pizzaToppings}`;
+  let greet = `Welcome to Pinky's Pies, ${name}! Our toppings today are `;
+  for (let topping of pizzaToppings) {
+    greet += `${topping}, `;
+  }
   console.log(greet);
 }
-
+// greetCustomer("Randall");
 // Create a getPizzaOrder function that
 // has the parameters size, crust, and an indefinite amount of toppings as inputs
 // prints the order, i.e. "One large thick crust pizza with x, y, z, ... coming up!"
@@ -59,8 +66,8 @@ function servePizza(pizzaOrder) {
 // Call each function and (starting with preparePizza) use the returned value from the previous function as its input
 // greetCustomer("Pinky");
 // getPizzaOrder(" spinach", " bacon", " tomatoes");
-// preparePizza(getPizzaOrder("large", "thick", "spinach ", "bacon ", "tomatoes"));
-// servePizza(preparePizza(getPizzaOrder("large", "thick", "sausage", "spinach")));
+// preparePizza(getPizzaOrder("" spinach", " bacon", " tomatoes"));
+// servePizza(preparePizza(getPizzaOrder(" spinach", " bacon", " tomatoes")));
 
 // Add, commit, and push your JS file to your GitHub repo.
 // Send your TA a link to your GitHub Homework repo when finished.

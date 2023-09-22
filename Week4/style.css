@@ -8,6 +8,10 @@ html {
   margin-left: 1.75rem;
 }
 
+body {
+  display: inline;
+}
+
 header {
   text-align: center;
 }
@@ -50,7 +54,7 @@ footer a {
   font-weight: 800;
 }
 
-div > ul > li {
+div > ul {
   list-style: none;
   line-height: 1.5;
   letter-spacing: 2px;
@@ -60,20 +64,22 @@ div > ul > li {
   display: block;
 }
 
-
-/*
-trying to move the list on both sides of the photo */
-
-ul:first-of-type {
-  position: absolute;
-  /* float: left; */
-  right: 80%;
-  top: 50%;
+.flex {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
 }
 
-ul:last-of-type {
-  /* float: right; */
-  position: absolute;
-  left: 70%;
-  bottom: 50%;
-}
+.flex > .list {
+  border: 1px solid;
+  padding-top: 150px;
+  text-align: center;
+  justify-content: space-around;
+  /* padding-right: 95px;
+  padding-right: 75px; */
+  }
+
+  ul {
+    padding-left: 0;
+  }
+

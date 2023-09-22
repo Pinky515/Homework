@@ -1,6 +1,6 @@
 // Create an array of pizzaToppings with at least four different toppings
 
-let pizzaToppings = ["peperoni", "bacon", "tomatoes", "spinach"];
+let pizzaToppings = ["pepperoni", "bacon", "tomatoes", "spinach"];
 console.log(pizzaToppings);
 
 // Create a greetCustomer function that prints a message that welcomes a guest, then informs them of the available toppings by looping over pizzaToppings (don't worry about perfect grammar here yet, i.e. "a, b, and c", see Bonus Challenge #9)
@@ -46,8 +46,13 @@ function greetCustomer(name) {
 // outputs a list with the size, crust, and toppings
 
 function getPizzaOrder(size, crust, ...toppingChoices) {
-  let orderRecieved = `${size}, ${crust} crust pizza with ${toppingChoices}, coming right up! `;
-  console.log(orderRecieved);
+  // let orderRecieved = `${size}, ${crust} crust pizza with ${toppingChoices}, coming right up! `;
+  // console.log(orderRecieved);
+  let orderRecieved = `${size}, ${crust} crust pizza with `;
+  for (let toppingChoices of pizzaToppings) {
+    orderRecieved += `${toppingChoices}, `;
+  }
+  console.log(`${orderRecieved}... coming right up!`);
   return [size, crust, toppingChoices];
 }
 
@@ -67,6 +72,16 @@ function preparePizza([size, crust, ...toppingChoices]) {
   return pizza;
 }
 
+// function makePizza(pizzaArray) {
+//   console.log("Order in Progress");
+//   return {
+//     size: pizzaArray[0],
+//     crust: pizzaArray[1],
+//     toppings: pizzaArray[2]
+//   }
+// }
+
+// makePizza("small", "deep dish", "tomatoes", "spinach");
 
 
 // Create a servePizza function that
@@ -74,10 +89,10 @@ function preparePizza([size, crust, ...toppingChoices]) {
 // logs a message that the pizza is ready and repeats the order, i.e. "Order up! Here's your large thick crust pizza with x, y, z, ... Enjoy!"
 // outputs the same pizza Object that was passed in
 
-function servePizza(pizza) {
+function servePizza(pizzaObj) {
   console.log(
-    `one ${pizza.size}, ${pizza.crust} crust pizza with ${pizza.toppingChoices}, your order is ready!`)
-  return pizza;
+    `one ${pizzaObj.size}, ${pizzaObj.crust} crust pizza with ${pizzaObj.toppingChoices}, your order is ready!`)
+  return pizzaObj;
 }
 // Call each function and (starting with preparePizza) use the returned value from the previous function as its input
 // Add, commit, and push your JS file to your GitHub repo.
@@ -85,3 +100,8 @@ function servePizza(pizza) {
 
 greetCustomer("Barack Obama");
 servePizza(preparePizza(getPizzaOrder("large", "thick", "pepperoni", "bacon")));
+
+greetCustomer("Michelle Obama");
+let order = getPizzaOrder("small", "regular", "pepperoni");
+let preparedPizza = preparePizza(order);
+servePizza(preparedPizza);
