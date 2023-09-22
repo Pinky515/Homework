@@ -17,7 +17,7 @@ console.log(
 
 //Construct an if statement that prints "Quality, not quantity." if you offer less than 10 toppings, or "A whole lot of pizza." if you offer 10 or more toppings.
 
-numberOfToppings = 1;
+// numberOfToppings = 1;
 
 if (numberOfToppings < 10) {
   console.log("Quality, not quantity.");
@@ -38,12 +38,17 @@ console.log(`Bonus - loops`);
 //let customerChoice = currentToppings++
 //console.log(customerChoice)
 
-for (
-  let currentToppings = 0, customerChoice = currentToppings + 1;
-  currentToppings <= numberOfToppings && customerChoice % 2 == 0;
-  currentToppings + 1
-) {
-  console.log(customerChoice + `, Nice choice!`);
-}
+// for (
+//   let currentToppings = 0, customerChoice = currentToppings + 1;
+//   currentToppings <= numberOfToppings && customerChoice % 2 == 0;
+//   currentToppings + 1
+// ) {
+//   console.log(customerChoice + `, Nice choice!`);
+// }
+
+for (let x = 2; x <= numberOfToppings; x += 2) {
+  console.log(x);
+ }
+
 
 //console.log(customerChoice + `, Nice choice!`);
