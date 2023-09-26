@@ -1,4 +1,4 @@
-const user = [
+const data = [
   {
     userId: 1,
     id: 1,
@@ -356,14 +356,22 @@ const user = [
   }
 ];
 
-
+// create a list of user 5's posts
+// then, create a list of title and body pairs
 // {
 //   userId: 1,
 //   id: 1,
-//   title:
-//     "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-//   body:
-//     "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+//   title: "delectus aut autem",
+//   completed: false
 // },
 
+let user5 = data.filter(posts => posts.userId == 5);
+console.log(user5);
 
+const titleAndBody = data.map(data => {
+  let title = data.title;
+  let body = data.body;
+  return [title, body];
+});
+
+console.log(titleAndBody);
