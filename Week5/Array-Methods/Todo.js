@@ -1,4 +1,4 @@
-[
+const data = [
   {
     userId: 1,
     id: 1,
@@ -302,3 +302,34 @@
     completed: true
   }
 ];
+
+// {
+//   "userId": 3,
+//   "id": 50,
+//   "title": "cupiditate necessitatibus ullam aut quis dolor voluptate",
+//   "completed": true
+// }
+// create a list of user 3's to-dos
+// then find the number of user 3's incomplete tasks
+
+// let user3StillToDo = user.filter(function (status => user.completed == false);
+let user3 = data.filter(data => data.userId == 3);
+console.log(user3);
+let stillToDo = user3.filter(taskStatus => taskStatus.completed == false);
+console.log(stillToDo);
+console.log(stillToDo.length);
+
+console.log("-------------------------------------------------------------");
+// Bonus
+// create an object that summarizes the incomplete tasks of users 3, 7, & 8
+console.log(user3);
+let user2 = data.filter(data => data.userId == 2);
+console.log(user2);
+let user1 = data.filter(data => data.userId == 1);
+console.log(user1);
+
+console.log("-------------------------------------------------------------");
+let allUsers = [user1, user2, user3];
+console.log(allUsers);
+let incomplete = allUsers.filter(allUsers => allUsers.completed == false);
+console.log(incomplete);

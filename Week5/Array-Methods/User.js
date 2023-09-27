@@ -258,7 +258,7 @@ let user = [
 // let telephoneNumbers = user.map(user => {
 //   return user.phone;
 // });
-
+// create and print a list of phone numbers
 let telephoneNumbers = user.map(user => user.phone);
 console.log(telephoneNumbers);
 
@@ -269,4 +269,12 @@ console.log(telephoneNumbers);
 // console.log(emailAndWebsite);
 // // console.log(emailAndWebsite2);
 
-// need to iterate through both at the same time.
+// create and print a list of website and email pairs (pair them in a string, array, or object)
+
+let websiteAndEmail = user.map(user => {
+  let website = user.website;
+  let email = user.email;
+  return [website, email]
+}
+);
+console.log(websiteAndEmail);
