@@ -274,7 +274,6 @@ console.log(telephoneNumbers);
 let websiteAndEmail = user.map(user => {
   let website = user.website;
   let email = user.email;
-  return [website, email]
-}
-);
+  return [website, email];
+});
 console.log(websiteAndEmail);
